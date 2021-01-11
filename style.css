@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: sans-serif;
+    padding: 20px;
+    font-family: 'Jua', sans-serif;
+    color: black;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.nav-PC {
+    width: 75%;
+    background-color: #fcf8f8 !important;
+    position: fixed;
+    height: 7vh;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 12.5%;
+    background-color: #ffffff;
+    -webkit-box-shadow: 3px 3px 20px -4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 3px 3px 20px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 20px -4px rgba(0, 0, 0, 0.75);
+}
+
+.nav__main {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list-link {
+    font-size: 1.7rem;
+    color: black;
+    opacity: 80%;
+    text-decoration: none;
+}
+.nav__list-link:hover {
+    color: #e7796b;
+}
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+.nav__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 70%;
+}
+
+.button {
+    color: black;
+    font-size: 16px;
+    border: none;
+    text-decoration: none;
+}
+
+.button:visited {
+    text-decoration: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: #e7796b;
+}
+
+.empty {
+    height: 15vh;
+}
+.section {
+    padding-top: 40px;
+    z-index: -1;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url('./images/banner1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    z-index: -1;
+}
+.title {
+    font-family: 'Jua', sans-serif;
+    font-size: 44.5px;
+    line-height: 1.67;
+    text-align: center;
+    color: white;
+    border: none;
+    margin:0 auto;
+    padding: 5vh 0 2vh 0;
+}
+.subtitle {
+    font-family: 'Jua', sans-serif;
+    font-size: 33px;
+    font-weight:400;
+    line-height: 1.53;
+    text-align: center;
+    color: white;
+    border: none;
+    margin:0 auto;
+    padding:0px;
+}
+
+.container {
+    margin: 0 auto;
+    z-index: 0;
+    background: #F6F7FA;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:120vh;
+    /*background-image: url('./images/doctor.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.file-upload {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 80%;
+    background-color:white;
+    border: solid 1.5px #f6f7fa;
+    height: 100vh;
+    margin-bottom:10px;
+}
+.image-upload-wrap {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 57%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border: dashed 1.5px #35465d;
+    border-radius: 10px;
+    background-color: #ffffff;
+    height:80%;
+}
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #949daa;
+    border: 1.5px dashed #ffffff;
+}
+.drag-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.upload-image {
+    font-size: 100px;
+    margin: auto;
+    padding: 20px;
+}
+.upload-text {
+    font-family: NanumSqaureR;
+    font-size: 1.2rem;
+    line-height: 1.53;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #35465d;
+}
+
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+.file-upload-image {
+    max-height: 48vh;
+}
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+}
+
+.loading {
+    display: none;
+}
+
+.text-center{
+    font-size:20px;
+}
+
+.result-container {
+    display: none;
+}
+
+.result-message {
+    font-size: 30px;
+    margin:20px 0px;
+}
+
+.result-badPart{
+    font-size: 25px;
+}
+
+.result-content {
+    width:70%;
+    font-size: 20px;
+    padding: 20px 0;
+    margin:0 auto;
+}
+
+.try-again-btn{
+    border-radius:40px;
+    cursor:pointer;
+    background-color:#35465d;
+    border: solid 1.5px #35465d;
+    
+}
+
+.try-again-text{
+    font-family: 'Jua', sans-serif;
+    padding:4px 15px;
+    font-size:1.5rem;
+    text-align:center;
+    color:white;
+}
+
+.etc {
+    background: #f5f5f7;
+    padding: 0 12.5%;
+}
+
+.youtube {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+.adviser {
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: right;
+}
+.youtube-cover {
+    display: flex;
+    justify-content: flex-end;
+}
+.youtube-link {
+    font-family: 'Jua', sans-serif;
+    font-size: 1rem;
+    line-height: 1.71;
+    text-align: center;
+    color: #f73737;
+    text-decoration: underline;
+} /* .youtube-link:hover { font-family: NanumSqaureR; font-size: 1.5rem;
+line-height: 1.71; text-align: center; color: #f73737; text-decoration: underline; } */
+.youtube-icon {
+    width: 2%;
+}
+
+h1 {
+    margin: 1em 0;
+    border-bottom: 1px dashed;
+    font-weight: lighter;
+}
+
+.loader {
+    margin: 0 0;
+    height: 70px;
+    width: 20%;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+    color: #777;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect {
+    fill: #ff6700;
+}

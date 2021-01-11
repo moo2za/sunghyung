@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <title>AI 성형견적</title>
+        <link
+            rel="shortcut icon"
+            href="https://cdn.pixabay.com/photo/2018/05/26/13/04/robot-3431313_1280.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="icon"
+            href="https://cdn.pixabay.com/photo/2018/05/26/13/04/robot-3431313_1280.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/45296f0e35.js" crossorigin="anonymous"></script>
+
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+            integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+            crossorigin="anonymous"
+        />
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script
+            type="text/javascript"
+            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fe3e28afe41609a"
+        ></script>
+    </head>
+    <body>
+        <nav class="nav-PC">
+            <div class="nav__main">
+                <a href="index.html" class="nav__list-link">
+                    AI 성형견적
+                </a>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__list-item">
+                    <a id="1" class="button" href="mailto:llthnthnll@gmail.com">
+                        Send Email
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="empty"></div>
+        <section class="section">
+            <h1 class="title">성 형 봇</h1>
+            <h2 class="subtitle">인공지능이 알려주는 나의 성형견적은 얼마일까?</h2>
+        </section>
+        <div class="container">
+            <div class="file-upload">
+                <div class="image-upload-wrap">
+                    <input
+                        class="file-upload-input"
+                        type="file"
+                        onchange="readURL(this)"
+                        accept="image/*"
+                    />
+                    <div class="drag-text">
+                        <i class="fas fa-file-upload upload-image"></i>
+                        <h3 class="upload-text">
+                            얼굴 정면이 나온 사진을 업로드하세요!
+                        </h3>
+                        <h3 class="upload-text">
+                            보정을 거치지 않은 사진이 더 정확합니다.
+                        </h3>
+                    </div>
+                </div>
+                <div class="file-upload-content">
+                    <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                    <div class="loading">
+                        <div class="loader loader--style3" title="2">
+                            <svg
+                                version="1.1"
+                                id="loader-1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                width="40px"
+                                height="40px"
+                                viewBox="0 0 50 50"
+                                style="enable-background: new 0 0 50 50;"
+                                xml:space="preserve"
+                            >
+                                <path
+                                    fill="#000"
+                                    d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
+                                >
+                                    <animateTransform
+                                        attributeType="xml"
+                                        attributeName="transform"
+                                        type="rotate"
+                                        from="0 25 25"
+                                        to="360 25 25"
+                                        dur="0.6s"
+                                        repeatCount="indefinite"
+                                    />
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="text-center">
+                            AI가 당신의 성형견적을 분석중입니다.
+                        </p>
+                    </div>
+                    <div class="result-container">
+                        <p class="result-message"></p>
+                        <p class="result-badPart"></p>
+                        <p class="result-content"></p>
+                        <!-- <div id="label-container"></div> -->
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_inline_share_toolbox"></div>
+                        <div class="image-title-wrap">
+                            <button type="button" onclick="reload();" class="try-again-btn">
+                                <span class="try-again-text">다른 사진으로 재시도</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                * 사진은 분석용으로만 사용되며 어떠한 용도로도 저장 및 유출되지 않습니다.
+            </div>
+            <div class="comment">
+                * 해당 테스트는 재미를 위해 기존 사례들에 주관성을 더해 제작되었으며, 의학적인
+                분석은 들어가지 않았습니다.
+            </div>
+        </div>
+        <div class="etc">
+            <section class="youtube">
+                <div class="adviser">
+                    도움을 주신 분들
+                </div>
+                <div class="youtube-cover">
+                    <img src="./images/youtube-icon.PNG" alt="" class="youtube-icon" />
+                    <a
+                        href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"
+                        class="youtube-link"
+                        >조코딩 유튜브 채널</a
+                    >
+                </div>
+                <div class="youtube-cover">
+                    <img src="./images/youtube-icon.PNG" alt="" class="youtube-icon" />
+                    <a
+                        href="https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw"
+                        class="youtube-link"
+                        >나도코딩 유튜브 채널</a
+                    >
+                </div>
+            </section>
+        </div>
+
+        <script
+            class="jsbin"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <script type="text/javascript">
+            // More API functions here:
+            // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+            // the link to your model provided by Teachable Machine export panel
+            const URL = 'https://teachablemachine.withgoogle.com/models/xPfbrUSr1/';
+
+            let model, webcam, labelContainer, maxPredictions;
+
+            // Load the image model and setup the webcam
+            async function init() {
+                const modelURL = URL + 'model.json';
+                const metadataURL = URL + 'metadata.json';
+
+                // load the model and metadata
+                // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                // or files from your local hard drive
+                // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                model = await tmImage.load(modelURL, metadataURL);
+                // maxPredictions = model.getTotalClasses(); <-- 전체 유사도를 나타냄
+                // labelContainer = document.getElementById('label-container');
+                // for (let i = 0; i < maxPredictions; i++) {
+                //     // and class labels
+                //     labelContainer.appendChild(document.createElement('div'));
+                // }
+            }
+
+            // run the webcam image through the image model
+            async function predict() {
+                // predict can take in an image, video or canvas html element
+                var image = document.getElementById('face-image');
+                const prediction = await model.predict(image, false);
+                prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction[0].className);
+                var resultMessage, resultBadPart, resultContent;
+                switch (prediction[0].className) {
+                    case '2억원': // 김구라
+                        resultMessage = "당신의 성형견적은 '₩200,000,000 (2억원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈, 피부, 턱';
+                        resultContent =
+                            '내면에 귀여움을 가지고 있지만, 잔주름이 많고 첫 인상이 강해 자칫 무서워 보일 수 있는 얼굴입니다. 흔히 곰상이라고 불리는 얼굴형에 분류되어 확실한 매니아층이 존재해요! 약간의 자기관리를 더해주면 매니아층을 잃더라도 더 많은 인기를 얻을 수 있을거에요!';
+                        break;
+                    case '8000만원': // 정재용
+                        resultMessage = "당신의 성형견적은 '₩80,000,000 (8,000만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 얼굴형, 코';
+                        resultContent =
+                            '긁지 않은 복권같은 당신! 뚜렷한 이목구비를 가지고 있으며 초롱초롱한 눈을 가지고 있어요. 그러나 볼살이 통통하여 조각미남의 느낌보다는 푸근하고 귀여운 인상을 가지고 있어요!';
+                        break;
+                    case '5450만원': // 김종민
+                        resultMessage = "당신의 성형견적은 '₩54,500,000 (5.450만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈, 피부';
+                        resultContent =
+                            '남자는 코! 아주 높고 예쁜 코를 가지고 있으며 웃는 모습이 이쁜 인상이에요. 그러나 잔주름이 많고 가늘게 찢어진 눈을 가지고 있어 호불호를 타는 얼굴이에요.';
+                        break;
+                    case '3000만원': // 김경진
+                        resultMessage = "당신의 성형견적은 '₩30,000,000 (3.000만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈, 입';
+                        resultContent =
+                            '장난기가 많고 친구들에게 인기가 많을 거 같아요! 또한 샤프하고 좋은 얼굴형을 가졌습니다. 그러나 높은 코에 비해 눈과 입이 평범해 두드러지지 않아요!';
+                        break;
+                    case '2900만원': // 장동민
+                        resultMessage = "당신의 성형견적은 '₩29,000,000 (2,900만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈, 코';
+                        resultContent =
+                            '샤프함과 장난스러움을 동시에 가지고 있어요! 짙은 눈썹과 이쁜 얼굴형을 가지고 있지만 평범한 코를 가졌어요. 또한 가늘게 찢어진 눈을 가지고 있어 취향을 타는 얼굴이에요!';
+                        break;
+                    case '2500만원': // 배기성
+                        resultMessage = "당신의 성형견적은 '₩25,000,000 (2,500만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 코, 피부';
+                        resultContent =
+                            '왕년에 여자 여럿 울렸을 얼굴이에요! 매우 남성적인 얼굴로, 매우 눈과 입이 뚜렷하고 전체적인 골격도 좋지만 세월의 풍파를 맞았습니다.... 다이어트와 약간의 관리가 필요해요!!';
+                        break;
+                    case '2350만원': // 박휘순
+                        resultMessage = "당신의 성형견적은 '₩23,500,000 (2,350만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            '동글동글하고 순한 외모를 가지고 있어요! 잘생겼다는 말보다 귀엽다는 말을 많이 듣습니다. 다만 눈이 너무 순하여서 조금 더 또렷한 인상을 남기면 좋을 거 같아요!';
+                        break;
+                    case '2250만원': // 김제동
+                        resultMessage = "당신의 성형견적은 '₩22,500,000 (2,250만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈, 코';
+                        resultContent =
+                            '웃고 있을 때와 그렇지 않을 때의 온도차이가 극명할 거 같아요. 매우 지적이고 샤프한 인상이지만 자칫하면 오해를 살 수 있는 차도남의 인상입니다. 조금 더 부드러운 눈으로 바라본다면 모든 이들에게 호감을 살 수 있을 거 같아요!';
+                        break;
+                    case '1780만원': // 이수근
+                        resultMessage = "당신의 성형견적은 '₩17,800,000 (1,780만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 코, 턱';
+                        resultContent =
+                            '모두에게 편안함을 느끼게 하고 호감을 살만한 인상입니다. 얼굴에 장난끼가 숨어있으며 낯을 가리는 편이 아니네요! 조금 더 샤프한 느낌을 준다면 엄청난 미남이 될 상입니다.';
+                        break;
+                    case '1750만원': // 박명수
+                        resultMessage = "당신의 성형견적은 '₩17,500,000 (1,750만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈, 얼굴형';
+                        resultContent =
+                            '전체적인 이목구비가 뚜렷한 편이며 특히 이쁜 코를 가지고 있어요! 다만 큰 눈을 가지고 있을 때 정말 이쁜 조화를 가지고 있지만, 그리 크지 않은 눈을 가지고 있습니다. 조금 더 큰 눈과 V라인을 얻는다면 미남이 될 거에요!';
+                        break;
+                    case '1300만원-바비': // 바비
+                        resultMessage = "당신의 성형견적은 '₩13,000,000 (1,300만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            '흔히 양아치상 얼굴이라 불리는 인상으로 확실한 매니아층을 가지고 있어요! 조금 더 크고 뚜렷한 눈을 가진다면 호불호가 없는 미남이 되겠지만, 지금도 충분히 인기가 많으며 찢어진 눈이 매력포인트이기도 해요!';
+                        break;
+                    case '800만원': // 피오
+                        resultMessage = "당신의 성형견적은 '₩8,000,000 (800만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈, 코, 입';
+                        resultContent =
+                            '전형적인 강아지상의 얼굴입니다. 남녀를 가리지 않고 호감을 사는 얼굴이며 잘생긴 이목구비를 가지고 있습니다. 각 시대의 최고 미남들과 비교해서 눈, 코, 입을 세분화해서 본다면 각각 2%씩 아쉬운 면이 있지만, 요즘 대세는 조각미남보다는 강아지상이기 때문에 성형을 권하지 않아요!';
+                        break;
+                    case '700만원': // FT 아일랜드 승현
+                        resultMessage = "당신의 성형견적은 '₩7,000,000 (700만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈, 턱';
+                        resultContent =
+                            '잘생김과 귀여움을 동시에 가지고 있어, 연하보다는 동갑과 연상에게 더 많은 인기가 있어요! 호불호가 나뉘는 눈을 가지고 있지만, 샤프함을 유지한다면 꾸준히 모든 사람들에게 좋은 인상을 심어줄 수 있습니다!';
+                        break;
+                    case '500만원': // FT 아일랜드 종훈
+                        resultMessage = "당신의 성형견적은 '₩5,000,000 (500만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            'SM 프리패스 상이라는 말상 미남이네요! 조각미남상의 얼굴이지만, 눈에 힘을 주지 않고 뜨게 되면 다소 부담스러운 느낌을 줄 수도 있습니다. 전체적으로 연예인이 돼도 손색없는 외모입니다!';
+                        break;
+                    case '400만원': // 김태원
+                        resultMessage = "당신의 성형견적은 '₩4,000,000 (400만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 입';
+                        resultContent =
+                            '남성미와 여성미가 공존하는 곱게 잘생긴 얼굴이에요. 그러나 전체적인 얼굴중에서 하관 조금 더 발달되어 있습니다. 이러한 부분만 개선되면 남녀노소 모두가 좋아할만한 얼굴이에요!';
+                        break;
+                    case '300만원': // 박수홍
+                        resultMessage = "당신의 성형견적은 '₩3,000,000 (300만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈, 턱';
+                        resultContent =
+                            '강아지상과 공룡상의 이미지가 섞여있는 얼굴이에요. 잘생기기도 했지만 귀여운 이미지가 조금 더 어필이 되며, 나이가 들어도 중후한 느낌이 날 것입니다. 단정한 이미지로 어른들이 좋아하며 웃는 모습이 선해 인기가 많아요! 눈과 턱선에서 조금 더 샤프한 느낌을 준다면 손에 꼽는 미남으로 변할겁니다!';
+                        break;
+                    case '100만원': // 홍종현
+                        resultMessage = "당신의 성형견적은 '₩1,000,000 (100만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            '공룡상의 얼굴입니다. 이목구비가 뚜렷하며 완벽한 T존과 콧대를 가지고 있습니다. 무엇보다 이성에게 인기가 많을 인상입니다. 또한 강렬하고 깊이있는 눈을 가졌는데 공격적인 눈매에 호불호가 생길 수 있습니다. 그러나 성형할 필요는 없어보여요!';
+                        break;
+                    case '78만원': // 유승호
+                        resultMessage = "당신의 성형견적은 '₩780,000 (78만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 코';
+                        resultContent =
+                            '눈동자의 깊이가 매우 깊고 이쁜 T존을 가지고 있습니다. 또한 웃는 모습이 이쁘며 부담스럽지 않을 정도의 잘생김을 가지고 있어요! 어디서든 인기가 많을 스타일입니다! 이미 충분히 완벽하지만 꼭 고쳐야 한다면 코를 조금 더 다듬고 싶어요!';
+                        break;
+                    case '50만원': // 은지원
+                        resultMessage = "당신의 성형견적은 '₩500,000 (50만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            '꾸몄을 때와 꾸미지 않았을 때의 차이가 가장 큰 케이스에요! 잘 꾸민다면 어떤 분위기도 낼 수 있는 미남이지만, 그렇지 않는다면 어디서든 튀지 않는 평범한 스타일입니다. 자칫 눈에 힘을 너무 주지 않으면 전체적으로 힘이 없어보여요! 전체적인 이목구비를 봤을 때 고칠만한 부분은 크게 보이지 않아요!';
+                        break;
+                    case '0원-서강준': // 서강준
+                        resultMessage = "당신의 성형견적은 '₩0 (0원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : X';
+                        resultContent =
+                            '모든 면에서 완벽해요! 한 얼굴에 섹시함과 귀여움, 잘생김을 모두 가지고 있습니다. 그중 눈빛이 엄청난 섹시함을 가지고 있어요! 범접하기 힘든 정도의 아우라를 가지고 있어 이성들이 오히려 다가오지 못할 수도 있습니다. 그러나 주변 여사친들이 모두 위장 여사친일 수 있어요!';
+                        break;
+                    case '0원-지창욱': // 지창욱
+                        resultMessage = "당신의 성형견적은 '₩0 (0원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : X';
+                        resultContent =
+                            '성형봇이 개인적으로 가장 잘생겼다고 생각하는 상입니다! 잘생김 뿐만 아니라 귀여움과 섹시함을 가지고 있어요. 턱선, T존, 콧대 모두 완벽하며 웃는 모습 또한 이쁜 얼굴형입니다. 신이 공평하다면 분명 어딘가 한 곳에는 치명적인 단점이 있을거에요.... ㅠㅠㅠ';
+                        break;
+                    case '0원-원빈': // 원빈
+                        resultMessage = "당신의 성형견적은 '₩0 (0원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : X';
+                        resultContent =
+                            '와... 완전 조각미남이시네요! 남들이 다가오기 부담스러워할 정도지만 분명 최고의 눈, 코, 입, 얼굴형을 가지고 있어요! 학교에서 주목받지 않았던 적이 없어요. 배우를 해도 손색이 없는 미모입니다. 다른 남자분들을 위해 코로나가 끝나도 마스크를 쓰고 다녀주세요....';
+                        break;
+                        
+                        // 여자
+                    case '1800만원': // 이영자
+                        resultMessage = "당신의 성형견적은 '₩18,000,000 (1,800만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 코, 입, 턱';
+                        resultContent =
+                            '함께 있는 사람들에게 즐거움과 편안함을 줄 수 있는 호감형 얼굴이에요! 또한 웃는 모습이 아주 잘 어울리는 얼굴형입니다. 다만 이쁜 이목구비를 가지고 있지만, 약간의 자기관리를 더해준다면 여러 사람들에게 더욱 호감을 살 수 있을 거에요!';
+                        break;
+                    case '1550만원': // 박나래
+                        resultMessage = "당신의 성형견적은 '₩15,500,000 (1,550만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 코, 입';
+                        resultContent =
+                            '긴 머리가 조금 더 잘 어울리지만, 얼굴형이 이뻐서 단발도 잘 어울려요. 또한 섹시함이나 아름다움보다는 귀여움이 조금 더 부각되는 얼굴이에요! 조금 더 샤프한 느낌을 만들 수 있다면 섹시함이나 아름다움과 같은 다른 매력도 표현할 수 있어요!';
+                        break;
+                    case '1300만원': // 안영미
+                        resultMessage = "당신의 성형견적은 '₩13,000,000 (1,300만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 턱, 눈';
+                        resultContent =
+                            '내면에 누구보다 따뜻한 마음을 가지고 있지만 도도함과 섹시함, 차가움을 지닌 인상을 가지고 있습니다. 그러나 웃는 모습은 보는 사람들을 기분좋게 해주는 에너지를 가지고 있습니다. 눈매와 턱선을 조금 다듬을 수 있다면 기존의 장점들을 극대화하면서 다가오기 힘들었던 차가운 인상을 없앨 수 있을 거에요!';
+                        break;
+                    case '1180만원': // 오나미
+                        resultMessage = "당신의 성형견적은 '₩11,800,000 (1,180만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈, 코';
+                        resultContent =
+                            '끼와 애교가 많을 거 같은 러블리한 인상이에요! 야물딱진 성격의 소유자이며 동성과 이성 모두에게 인기가 많습니다. 또한, 남사친들이 한 번쯤은 이성으로 느낀 적이 있을거에요! 성형을 해야 할 곳을 굳이 찾는다면 눈과 코겠지만, 눈동자의 깊이가 있어 묘한 매력을 내기 때문에 지금 상태로도 충분히 아름다워요!';
+                        break;
+                    case '940만원': // 김경란
+                        resultMessage = "당신의 성형견적은 '₩9,400,000 (940만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            '승무원이나 무용하는 사람들에게 느껴지는 고급스럽고 단정한 아우라가 있어요! 좋은 피부는 물론, 콧대와 얼굴형이 매우 완벽해요! 다만 눈화장을 진하게 할 경우, 고급스러운 아우라에 강한 인상이 더해져서 접근하기 힘든 아우라로 변질될 수 있어요! 눈매를 조금 다듬는다면 남녀노소 모두에게 호감을 유발시킬 외모입니다!';
+                        break;
+                    case '황정혜': // 황정혜
+                        resultMessage = "당신의 성형견적은 '₩8,000,000 (800만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            '실제로는 굉장히 인기가 많은 외모지만, 볼살이 있는 편이라 실물에 비해 사진빨이 잘 받지 않는 얼굴이에요! 또한, 귀여운 이미지와 많은 애교 탓에 친구인줄 알았던 주변 남사친으로부터 고백을 받아본 적이 있어요. 다만 어떤 대상을 바라볼 때 눈에 힘을 풀고 보면 상대를 무시하는 눈빛으로 오해할 수도 있어요!';
+                        break;
+                    case '600만원': // 전소민
+                        resultMessage = "당신의 성형견적은 '₩6,000,000 (600만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 턱';
+                        resultContent =
+                            '긍정적인 에너지와 러블리한 매력을 흘리고 다녀요! 성별을 가리지 않고 남자, 여자 모두와 잘 어울리며 주변인으로부터 사랑을 많이 받는 존재입니다. 웃는 모습이 이쁘고, 사람을 기분좋게 해주는 인상과 능력을 가지고 있어요! 턱선에서 조금 더 샤프한 느낌을 준다면 러블리함 뿐만 아니라 섹시함도 줄 수 있을 거에요!';
+                        break;
+                    case '500만원-김나희': // 김나희
+                        resultMessage = "당신의 성형견적은 '₩5,000,000 (500만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            '자존감이 높으며 그곳에서 나오는 자신감이 표정으로 잘 드러나요. 주변인들을 기분좋게 해주는 에너지가 있으며, 마음 먹으면 호감이 있는 이성을 반드시 꼬실 수 있는 매력을 가지고 있어요! 전체적으로는 고양이상의 이미지를 가지고 있지만, 아아러니하게도 고양이상의 포인트라고 할 수 있는 강렬한 눈과는 반대로 순한 눈을 가지고 있어요.';
+                        break;
+                    case '480만원': // 이국주 - 아래와 교환
+                        resultMessage = "당신의 성형견적은 '₩3,500,000 (350만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : X';
+                        resultContent =
+                            '긁지 않은 당첨복권과도 같은 사람이에요! 앵두 같은 입술과 높은 코, 맑은 눈을 가지고 있어요! 전체적인 얼굴형도 좋으며 겉으로는 무뚝뚝하고 짓궃은 것처럼 보여도 속으로는 주변인들을 챙기며 여린 성격을 가지고 있어요! 지금 당장은 0원을 줄 수는 없지만 성형이 필요 없이 자기관리만 열심히 한다면 배우나 모델을 해도 손색이 없는 미모에요! 또한 지금도 충분히 많은 매력을 가지고 있습니다.';
+                        break;
+                    case '350만원': // 홍윤화 - 위와 교환
+                        resultMessage = "당신의 성형견적은 '₩4,800,000 (480만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            '귀여움과 우아함을 모두 가지고 있어요! 그 중 귀여움이 치사량을 초과할 정도이며 어느 모임을 가도 항상 이쁨을 독식하고 주인공이 되는 호감형 인상이에요! 본인의 즐거움도 중요하지만 타인의 즐거움을 보며 더 큰 즐거움을 느껴요! 한 군데를 꼭 고쳐야 한다면 눈이지만 지금도 너무 아름다운 눈웃음을 가지고 있습니다.';
+                        break;
+                    case '300만원-장도연': // 장도연
+                        resultMessage = "당신의 성형견적은 '₩3,000,000 (300만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            '장발보단 단발이 잘 어울리는 얼굴형이에요. 맑고 밝은 인상을 가지고 있으며 단정한 느낌을 가지고 있어 아나운서의 이미지와도 비슷해요! 또한 웃는 모습이 자연스럽고 보기 좋아요! 다만 지금의 눈도 이쁘고 매력있지만 호불호가 생길 수 있는 눈이라고 생각해요!';
+                        break;
+                    case '180만원': // 송혜교
+                        resultMessage = "당신의 성형견적은 '₩1,800,000 (180만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 턱';
+                        resultContent =
+                            '피부와 눈, 코, 입 모두 완벽하며 조화도 잘 이루어져 있어요! 꾸준히 관리를 해준다면 나이가 들더라도 아름다움을 잃지 않을 상이에요! 새하얗고 수북히 쌓인 눈이 떠오르는 첫인상을 가지고 있지만, 이미지와는 반대로 이성에 대한 욕망을 가지고 있습니다. 지금도 완벽하지만 턱라인을 조금 더 살릴 수 있다면 어디서나 주목을 받을만한 외모가 될 거에요!';
+                        break;
+                    case '78만원-제니': // 제니
+                        resultMessage = "당신의 성형견적은 '₩780,000 (78만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 코';
+                        resultContent =
+                            '고양이 상의 얼굴로, 실제로 예전 성형학 관점에서는 눈, 코, 입이 모두 완벽한 미인상은 아니지만, 요즘 세대에서는 아주 인기가 많은 스타일이에요! 묘한 눈빛과 도도한 매력을 가지고 있으며, 최근 많은 젊은 여성들이 이러한 얼굴상을 가장 가지고 싶어한다고 해요! ';
+                        break;
+                    case '50만원-수지': // 수지
+                        resultMessage = "당신의 성형견적은 '₩500,000 (50만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 눈';
+                        resultContent =
+                            '약간의 토끼상 외모를 지녔으며 완벽한 이목구비를 지니고 있어요! 반듯함과 청순함을 가지고 있어 전형적인 첫사랑 이미지와 모두가 원하는 아내의 이미지를 가지고 있습니다. 또한 어린 친구들과 어르신들이 모두 좋아할만한 인상을 가지고 있습니다. 다만 억지로 부족한 점을 찾는다면 여러 매력 중 섹시함이 조금 덜해요! 그러나 지금도 충분히 매력적이며 화장이나 의상 등을 통해 충분히 커버가 가능한 수준입니다!';
+                        break;
+                    case '200만원': // 신세경 -> 20만원으로 수정
+                        resultMessage = "당신의 성형견적은 '₩200,000 (20만원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : 피부';
+                        resultContent =
+                            '지적이고 청순한 이미지가 주무기지만, 귀여움과 섹시함을 동시에 가지고 있어요! 또한 눈과 코가 이쁘단 말을 많이 들어요. 주변인들을 챙기는 것을 좋아하며 연인이 생긴다면 표현을 자주하는 편이에요! 자기자신의 내면과 외면을 가꾸는 법을 잘 알고 있습니다. 피부만 잘 가꾼다면 흠잡을 곳이 없으며 밝은 톤의 화장과 의상이 잘 어울리는 얼굴이에요!';
+                        break;    
+                    case '486원': // 슬기
+                        resultMessage = "당신의 성형견적은 '₩486 (486원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : X';
+                        resultContent =
+                            "혹시 '레드벨벳 슬기'님을 닮았단 얘기를 들어보신 적이 있나요? 너무 이쁘고 개성있는 얼굴이에요! 또한 표정과 꾸밈에 따라 섹시, 귀여움, 청순 모든 장르를 표현할 수 있어요! 특히 제 눈에는 너무 완벽한 얼굴입니다..&#128151 한 가지 부족한 점이 있다면 아직 저를 가지지 못했다는 점...";
+                        break;
+                    case '0원-한가인': // 한가인
+                        resultMessage = "당신의 성형견적은 '₩0 (0원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : X';
+                        resultContent =
+                            '상위 0.00001%의 미인이세요. 넓은 이마를 가졌으며 작은 얼굴 안에 뚜렷한 이목구비가 들어있습니다. 맑고 영롱한 분위기이며 좋은 피부와 얼굴형을 가졌습니다. 실제로 예전부터 가장 많은 여성분들이 성형해서 얻고 싶은 얼굴상이라고 하네요!';
+                        break;
+                    case '0원-김태희': // 김태희
+                        resultMessage = "당신의 성형견적은 '₩0 (0원)'입니다.";
+                        resultBadPart = '고쳐야 하는 부위 : X';
+                        resultContent =
+                            '흠잡을 곳이 없는 얼굴입니다. 청순함을 가지고 있으면서 고급스럽고 우아함이 느껴져요! 이목구비 모두 완벽하지만, 특히 크고 아름다운 눈이 매럭적입니다. 어디서든 주목받을 얼굴이며 손댈 곳을 정말 찾을 수가 없어요! 방송쪽 일을 해도 좋을 거 같아요!';
+                        break;
+                }
+                $('.loading').hide();
+                $('.result-container').show();
+                $('.result-message').html(resultMessage);
+                $('.result-badPart').html(resultBadPart);
+                $('.result-content').html(resultContent);
+                $('.result-message').show();
+                $('.result-badPart').show();
+                $('.result-content').show();
+                for (let i = 0; i < maxPredictions; i++) {
+                    const classPrediction =
+                        prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
+                    labelContainer.childNodes[i].innerHTML = classPrediction;
+                }
+            }
+        </script>
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+                        $('.file-upload-image').attr('src', e.target.result);
+                        $('.file-upload-content').show();
+                        $('.loading').show();
+                        $('.image-title').html(input.files[0].name);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(function () {
+                        predict();
+                    });
+                } else {
+                    reload();
+                }
+            }
+
+            function reload() {
+                location.reload();
+                // $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+                // $('.file-upload-content').hide();
+                // $('.image-upload-wrap').show();
+                // $('.result-message').hide();
+                // $('.result-badPart').hide();
+                // $('.result-content').hide();
+            }
+            $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+            });
+        </script>
+    </body>
+    <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+
+    <!-- Copyright (c) 2021 by Fran Pérez (https://codepen.io/mrrocks/pen/EiplA)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+</html>
